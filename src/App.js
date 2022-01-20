@@ -41,6 +41,41 @@ export default function App() {
     }
 
     return (
-        <h1>Hello from the other site</h1>
+        <main>
+            {
+                notes.length > 0
+                    ?
+                    <Split
+                        sizes={[30, 70]}
+                        direction="horizontal"
+                        className="split"
+                    >
+                        <SideBar
+                            notes={notes}
+                            currentNote={findCurrentNote()}
+                            setCurrentNoteId={setCurrentNoteId}
+                            newNote={createNewNote}
+                        />
+                        {
+                            currentNoteId &&
+                            notes.length > 0 &&
+                            <Editor
+                                currentNote={findCurrentNote()}
+                                updateNote={updateNote}
+                            />
+                        }
+                    </Split>
+                    :
+                    <div className="no-notes">
+                        <h1>You have no notes</h1>
+                        <button
+                            className="first-note"
+                            onClick={createNewNote}
+                        >
+                            Create one now
+                        </button>
+                    </div>
+            }
+        </main>
     )
 }
