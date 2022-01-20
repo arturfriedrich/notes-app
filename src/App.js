@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SideBar from "./components/Sidebar"
+import Sidebar from "./components/Sidebar"
 import Editor from "./components/Editor"
 import { data } from "./data"
 import Split from "react-split"
@@ -15,7 +15,9 @@ import { nanoid } from "nanoid"
 
 export default function App() {
     const [notes, setNotes] = useState([])
-    const [currentNoteId, setCurrentNoteId] = useState((notes[0] && notes.id) || "")
+    const [currentNoteId, setCurrentNoteId] = useState(
+        (notes[0] && notes[0].id) || ""
+    )
 
     function createNewNote() {
         const newNote = {
@@ -50,7 +52,7 @@ export default function App() {
                         direction="horizontal"
                         className="split"
                     >
-                        <SideBar
+                        <Sidebar
                             notes={notes}
                             currentNote={findCurrentNote()}
                             setCurrentNoteId={setCurrentNoteId}
@@ -75,6 +77,7 @@ export default function App() {
                             Create one now
                         </button>
                     </div>
+
             }
         </main>
     )
