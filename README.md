@@ -12,6 +12,7 @@ New features in later versions:
 
 
 ![Screen Shot 2022-01-25 at 15 26 37](https://user-images.githubusercontent.com/67378210/150995835-c2c7e533-6264-42e9-81f8-e9b2f14a2b51.png)
+![Screen Shot 2022-01-25 at 15 28 13](https://user-images.githubusercontent.com/67378210/150995969-a6ca54cd-fd19-4a9a-92a2-1c4232515c0f.png)
 
 
 
